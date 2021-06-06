@@ -100,7 +100,7 @@ class MPRIS2Handler():
         title = self.meta.get('xesam:title')
         if title:
             title = str(title)
-            self.metadata = {
+            builddata = {
                 'album': str(self.meta.get('xesam:album')),
                 'artist': artist,
                 'title': title,
@@ -108,22 +108,23 @@ class MPRIS2Handler():
 
         length = self.meta.get('mpris:length')
         if length:
-            self.metadata['length'] = int(length)
+            builddata['length'] = int(length)
 
         tracknumber = self.meta.get('xesam:tracknumber')
         if tracknumber:
-            self.metadata['track'] = int(tracknumber)
+            builddata['track'] = int(tracknumber)
 
         filename = self.meta.get('xesam:url')
         if filename and 'file://' in filename:
             filename = urllib.parse.unquote(filename)
-            self.metadata['filename'] = filename.replace('file://', '')
+            builddata['filename'] = filename.replace('file://', '')
 
         arturl = self.meta.get('mpris:artUrl')
         if arturl:
             with urllib.request.urlopen(arturl) as coverart:
-                self.metadata['coverimageraw'] = coverart.read()
+                builddata['coverimageraw'] = coverart.read()
 
+        self.metadata = builddata
         return artist, title
 
     def getplayingmetadata(self):

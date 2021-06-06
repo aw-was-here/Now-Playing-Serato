@@ -157,12 +157,10 @@ class WebHandler():
     async def websocket_lastjson_handler(self, request, websocket):
         ''' handle singular websocket request '''
         metadata = request.app['metadb'].read_last_meta()
-        logging.debug('metadata = %s', metadata)
         if 'coverimageraw' in metadata:
             del metadata['coverimageraw']
         del metadata['dbid']
         await websocket.send_json(metadata)
-        logging.debug('past send json')
 
     async def websocket_streamer(self, request):
         ''' handle continually streamed updates '''
@@ -186,9 +184,6 @@ class WebHandler():
             while True:
                 while mytime > request.app['watcher'].updatetime:
                     await asyncio.sleep(1)
-
-                logging.debug('%s > %s', mytime,
-                              request.app['watcher'].updatetime)
 
                 mytime = await do_update(websocket, request.app['metadb'])
                 await asyncio.sleep(1)
@@ -256,7 +251,6 @@ class WebHandler():
 
     async def on_startup(self, app):
         ''' setup app connections '''
-        threading.current_thread().name = 'WebServer-startup'
         app['config'] = nowplaying.config.ConfigFile()
         app['metadb'] = nowplaying.db.MetadataDB()
         app['watcher'] = app['metadb'].watcher()
