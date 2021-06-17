@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Installation &#8212; Now Playing 0+untagged.1.g777cbea documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Upgrading" href="upgrading.html" />
+    <link rel="prev" title="Welcome to Now Playing’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<p>Binaries are not provided because of dbus-python, so please follow the developer guide
+to install in a Python virtual environment.  Note that currently, this software does
+not run headless.</p>
+<section id="important-note-for-linux-users">
+<h3><em>Important note for Linux users</em><a class="headerlink" href="#important-note-for-linux-users" title="Permalink to this headline">¶</a></h3>
+<p>In order to use MPRIS2, you <em>must</em> have dbus-python installed in your Python virtual
+environment.</p>
+</section>
+</section>
+<section id="mac">
+<h2>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Download the latest macOS release zip package
+<a class="reference external" href="https://github.com/whatsnowplaying/whats-now-playing/releases/latest">here</a>.</p></li>
+<li><p>Unzip the archive and place the unzipped <code class="docutils literal notranslate"><span class="pre">NowPlaying.app</span></code> file in your <code class="docutils literal notranslate"><span class="pre">Applications</span></code>
+folder or any other location that you desire.</p></li>
+</ul>
+<section id="important-note-for-macos-users">
+<h3><em>Important note for macOS users</em><a class="headerlink" href="#important-note-for-macos-users" title="Permalink to this headline">¶</a></h3>
+<p>Due to security measures in macOS Sierra and later, unsigned apps may have limitations
+placed on them.  These limitations will prevent them from operating correctly or even
+opening at all. Opening the app on High Sierra and newer versions of macOS by following
+the steps below. Versions before High Sierra have not been verified and are not currently
+supported.</p>
+<ul class="simple">
+<li><p>Do not unzip the downloaded zip package directly to the folder from where you will be
+running it. Instead, unzip it in a location such as the <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder
+and then move the <code class="docutils literal notranslate"><span class="pre">NowPlaying.app</span></code> to your destination folder (e.g.,
+“Applications”). Then run the app from the destination folder.</p></li>
+<li><p>If the app fails to open, try holding down the Control key and then double-clicking open.</p></li>
+<li><p>If after following the step above the app does not open, open Terminal and type:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">xattr</span> <span class="pre">-r</span> <span class="pre">-d</span> <span class="pre">com.apple.quarantine</span> <span class="pre">/path/to/NowPlaying.app</span></code> (replace with the
+correct path to the app).</p></li>
+</ul>
+</section>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Download the latest Windows release zip package
+<a class="reference external" href="https://github.com/whatsnowplaying/whats-now-playing/releases/latest">here</a>.</p></li>
+<li><p>Unzip the package and copy the entire unzipped folder containing the
+<code class="docutils literal notranslate"><span class="pre">NowPlaying.exe</span></code> file and supporting files to the directory you’d like the app to
+run from (i.e., <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span></code>).</p></li>
+</ul>
+<section id="important-note-for-windows-users">
+<h3><em>Important note for Windows users</em><a class="headerlink" href="#important-note-for-windows-users" title="Permalink to this headline">¶</a></h3>
+<p>Microsoft has beefed up Windows security and you may now get prompted about an unsigned
+binary.  Click on ‘More Info’ and then ‘Run Anyway’ to launch Now Playing.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Now Playing</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac">Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrading.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/m3u.html">M3U Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/mpris2.html">MPRIS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/serato.html">Serato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/obswebsocket.html">OBS WebSocket Plug-in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/twitchbot.html">TwitchBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/webserver.html">Webserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templatevariables.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparisons.html">Versus Comparisons</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Now Playing’s documentation!</a></li>
+      <li>Next: <a href="upgrading.html" title="next chapter">Upgrading</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Allen Wittenauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

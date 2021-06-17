@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>MPRIS2 &#8212; Now Playing 0+untagged.1.g777cbea documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Serato" href="serato.html" />
+    <link rel="prev" title="M3U Support" href="m3u.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="mpris2">
+<h1>MPRIS2<a class="headerlink" href="#mpris2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://mpris2.readthedocs.io/en/latest/">MPRIS2</a> is a specification for Linux DBus
+compatible music software to communicate with each other.  Now Playing supports reading
+track data from MPRIS2 sources, including VLC.  <a class="reference external" href="https://mixxx.org">Mixxx</a> is supported
+with the appropriate PR added. See below.</p>
+<p>In order to use MPRIS2 support, the dbus-python Python module must be installed in
+the virtual environment.</p>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Open Settings from the Now Playing icon</p></li>
+<li><p>Select Input Source from left-hand column</p></li>
+</ol>
+<a class="reference external image-reference" href="images/mpris2-input-source.png"><img alt="mpris2-input-source" src="../_images/mpris2-input-source.png" /></a>
+<ol class="arabic simple">
+<li><p>Select the MPRIS2 from the list of available input sources.</p></li>
+<li><p>Select MPRIS2 from the left-hand column.</p></li>
+<li><p>Select from the detected MPRIS2 sources.  Note that this list is not updated in
+real-time. Closing and re-opening the Settings UI will update the list.</p></li>
+</ol>
+<a class="reference external image-reference" href="images/mpris2-source-selection.png"><img alt="mpris2-input-source" src="../_images/mpris2-source-selection.png" /></a>
+<ol class="arabic simple">
+<li><p>Click Save</p></li>
+</ol>
+<section id="id2">
+<h3>Mixxx<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Currently, Mixxx does not have out-of-the-box support for MPRIS2.  However,
+<a class="reference external" href="https://github.com/mixxxdj/mixxx/pull/3483">PR 3483</a> adds support. As of this writing,
+that PR does not contain support for the <cite>xesam:url</cite> field, which limits its usabilty
+with Now Playing.  <a class="reference external" href="https://github.com/aw-was-here/mixxx/tree/mpris2">This fork</a> is
+usually up-to-date with main+PR 3483+xesam url support.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Now Playing</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="m3u.html">M3U Support</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MPRIS2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="serato.html">Serato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output/obswebsocket.html">OBS WebSocket Plug-in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output/twitchbot.html">TwitchBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output/webserver.html">Webserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templatevariables.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comparisons.html">Versus Comparisons</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="m3u.html" title="previous chapter">M3U Support</a></li>
+      <li>Next: <a href="serato.html" title="next chapter">Serato</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Allen Wittenauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/input/mpris2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

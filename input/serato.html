@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Serato &#8212; Now Playing 0+untagged.1.g777cbea documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OBS WebSocket Plug-in" href="../output/obswebsocket.html" />
+    <link rel="prev" title="MPRIS2" href="mpris2.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="serato">
+<h1>Serato<a class="headerlink" href="#serato" title="Permalink to this headline">¶</a></h1>
+<p>Serato is a commercial software package that runs on Mac OS X and Windows.  Now Playing
+has two modes with which it may use Serato as an input: Local and Remote.</p>
+<p>In Local mode, Now Playing will read the local session data on your computer directly.
+This mode has much more data available to use but requires Now Playing to run on the
+DJ computer.</p>
+<p>In Remote mode, Now Playing will read
+<a class="reference external" href="https://support.serato.com/hc/en-us/articles/228019568-Live-Playlists">Serato Live Playlists</a>
+over the Internet.  This mode allows for Now Playing to run on a different computer
+than the DJ computer, but does not have as much data available.</p>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Open Settings from the Now Playing icon</p></li>
+<li><p>Select Input Source from left-hand column</p></li>
+</ol>
+<a class="reference external image-reference" href="images/serato-source-selection.png"><img alt="Serato Source Selection" src="../_images/serato-source-selection.png" /></a>
+<ol class="arabic simple">
+<li><p>Select the Serato from the list of available input sources.</p></li>
+<li><p>Select Serato from the left-hand column.</p></li>
+<li><p>Configure either Local or Remote mode as appropriate (see below)</p></li>
+<li><p>Click Save</p></li>
+</ol>
+<section id="local-mode">
+<h3>Local Mode<a class="headerlink" href="#local-mode" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="images/serato-local.png"><img alt="Local Mode Settings" src="../_images/serato-local.png" /></a>
+<p>When Local Mode is active,  the <strong>Now Playing</strong> app runs on the same machine as Serato.  Configure the Serato Library Path to
+Serato’s directory, usually <code class="docutils literal notranslate"><span class="pre">Music/_Serato_</span></code>.  This method is the recommended installation as much more information is available
+and significantly improves <strong>Now Playing</strong>‘s correctness.</p>
+</section>
+<section id="remote-mode">
+<h3>Remote Mode<a class="headerlink" href="#remote-mode" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="images/serato-remote.png"><img alt="Remote Mode Settings" src="../_images/serato-remote.png" /></a>
+<p>Remote mode is useful when the streaming computer is not the same as the Serato DJ computer but the HTTP Server
+Mode cannot be used.</p>
+<ol class="arabic">
+<li><p>In Serato, make sure you enable Live Playlists and start a new session. From the <a class="reference external" href="https://support.serato.com/hc/en-us/articles/228019568-Live-Playlists">Serato website</a>:</p>
+<blockquote>
+<div><p>“To enable the Live Playlists feature, go to the Expansion Pack tab on the Setup screen and check the Enable Live Playlists
+option. Once enabled, the Start Live Playlist button is now displayed in the History panel. Click this to start and stop your Live
+Playlist session.”</p>
+</div></blockquote>
+</li>
+<li><p>Once a new playlist session is started, Serato will automatically open your web browser to your Live Playlist. <strong>IMPORTANT:</strong> You
+will need to select “Edit Details” on the Live Playlist webpage and change your playlist to “Public”, or else the <strong>Now Playing</strong>
+app will not be able to retrieve any song data. The webpage does not need to remain open.  So you can close it once you ensure that
+the playlist has been made public.</p></li>
+<li><p>Start the <strong>Now Playing</strong> app.  The app can be controlled and configured by accessing the menu from the icon in the Windows system tray or Mac menu bar.</p></li>
+</ol>
+<p>Be aware that as of this writing (2021-03-05), the only information available via Live Playlists is the artist and the title
+due to limitations on the Serato-side.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Now Playing</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="m3u.html">M3U Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpris2.html">MPRIS2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Serato</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../output/obswebsocket.html">OBS WebSocket Plug-in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output/twitchbot.html">TwitchBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output/webserver.html">Webserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templatevariables.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comparisons.html">Versus Comparisons</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="mpris2.html" title="previous chapter">MPRIS2</a></li>
+      <li>Next: <a href="../output/obswebsocket.html" title="next chapter">OBS WebSocket Plug-in</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Allen Wittenauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/input/serato.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

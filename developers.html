@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Developers &#8212; Now Playing 0+untagged.1.g777cbea documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Versus Comparisons" href="comparisons.html" />
+    <link rel="prev" title="Templates" href="templatevariables.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="developers">
+<h1>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NOTE: For people familiar with Python, it is HIGHLY RECOMMENDED that you use and
+build with venv due to the restrictive requirements of the tested packages listing.
+While newer versions MAY work, there is no guarantee that PyInstaller and other
+utilities will build a proper executable.
+</pre></div>
+</div>
+<section id="development-requirements">
+<h2>Development Requirements<a class="headerlink" href="#development-requirements" title="Permalink to this headline">¶</a></h2>
+<p>To locally build and install <strong>Now Playing</strong>, you will need the following:</p>
+<ol class="arabic simple">
+<li><p>Python for your operating system (3.8 or higher is recommended)</p></li>
+<li><p>Access to a development shell (e.g., /Applications/Utility/Terminal on OS X)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> installed and working</p></li>
+</ol>
+<section id="linux-pre-work">
+<h3>Linux Pre-work<a class="headerlink" href="#linux-pre-work" title="Permalink to this headline">¶</a></h3>
+<p>If you are on Linux, it is recommended that you install dbus-python at
+the system level first in order to get the basic OS requirements put in
+place first.  For example, for Debian-style systems:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python-dbus
+</pre></div>
+</div>
+</section>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv <span class="o">(</span>virtualenv directory<span class="o">)</span>
+<span class="nb">source</span> <span class="o">(</span>virtualenv directory<span class="o">)</span>/bin/activate
+git clone https://github.com/whastnowplaying/whats-now-playing.git
+<span class="nb">cd</span> whats-now-playing
+pip install .
+</pre></div>
+</div>
+<p>On Linux, install dbus-python in your virtual env:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install dbus-python
+</pre></div>
+</div>
+<p>At this point, you should be able to run the software from the shell:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NowPlaying
+</pre></div>
+</div>
+</section>
+<section id="build-executable">
+<h2>Build Executable<a class="headerlink" href="#build-executable" title="Permalink to this headline">¶</a></h2>
+<p>To build a stand-alone executable, you will need to run PyInstaller:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyinstaller NowPlaying.spec
+</pre></div>
+</div>
+<p>There should now be a <code class="docutils literal notranslate"><span class="pre">dist</span></code> directory and inside that directory will be
+either a <code class="docutils literal notranslate"><span class="pre">NowPlaying.app</span></code> on OS X or just a <code class="docutils literal notranslate"><span class="pre">NowPlaying</span></code> single file.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Now Playing</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrading.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/m3u.html">M3U Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/mpris2.html">MPRIS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input/serato.html">Serato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/obswebsocket.html">OBS WebSocket Plug-in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/twitchbot.html">TwitchBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output/webserver.html">Webserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templatevariables.html">Templates</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#development-requirements">Development Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-executable">Build Executable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comparisons.html">Versus Comparisons</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="templatevariables.html" title="previous chapter">Templates</a></li>
+      <li>Next: <a href="comparisons.html" title="next chapter">Versus Comparisons</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Allen Wittenauer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/developers.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
